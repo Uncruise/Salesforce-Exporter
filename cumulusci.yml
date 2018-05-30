@@ -1,0 +1,7 @@
+project:
+    name: Salesforce-Exporter
+    package:
+        name:  Salesforce-Exporter
+        api_version: '42.0'
+
+
