@@ -7,16 +7,15 @@ def main():
 
     salesforce_type = str(sys.argv[1])
     client_type = str(sys.argv[2])
-    client_subtype = str(sys.argv[3])
-    client_emaillist = str(sys.argv[4])
+    client_emaillist = str(sys.argv[3])
 
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 4:
         print ("Calling error - missing inputs.  Expecting " +
-               "salesforce_type client_type client_subtype client_emaillist [Exporter_root]\n")
+               "salesforce_type client_type client_emaillist [Exporter_root]\n")
         return
 
-    if len(sys.argv) == 6:
-        Exporter_root = str(sys.argv[5])
+    if len(sys.argv) == 5:
+        Exporter_root = str(sys.argv[4])
     else:
         Exporter_root = "C:\\repo\\Salesforce-Exporter-Private\\Clients\\" + sys.argv[2] + "\\Salesforce-Exporter"
 
@@ -28,13 +27,11 @@ def main():
 
     # Export Data
     print "\n\nExporter - Export Data Process\n\n"
-    process_data(exporter_directory, salesforce_type, client_type,
-                 client_subtype, client_emaillist)
+    process_data(exporter_directory, salesforce_type, client_type, client_emaillist)
 
     print "Exporter process completed\n"
 
-def process_data(exporter_directory, salesforce_type, client_type,
-                 client_subtype, client_emaillist):
+def process_data(exporter_directory, salesforce_type, client_type, client_emaillist):
     """Process Data based on data_mode"""
 
     from os import makedirs
