@@ -122,7 +122,7 @@ def export_dataloader(exporter_directory, client_type, salesforce_type, file_pat
 
         stdout, stderr = export_process.communicate()
 
-        return_code += "export_dataloader (returncode): " + str(export_process.returncode)
+        return_code += "\n\nexport_dataloader (returncode): " + str(export_process.returncode)
         return_stdout += "\n\nexport_dataloader (stdout):\n" + stdout
         return_stderr += "\n\nexport_dataloader (stderr):\n" + stderr
 
