@@ -44,6 +44,9 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     file_path = exporter_directory + "\\Status"
     if not exists(file_path):
         makedirs(file_path)
+    export_path = exporter_directory + "\\Export"
+    if not exists(export_path):
+        makedirs(export_path)
 
     body = "Export Data\n\n"
 
