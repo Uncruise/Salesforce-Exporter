@@ -67,7 +67,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="C501_Service_Household__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c FROM C501_Service_Household__c"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Service_Record__c FROM C501_Service_Household__c"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Household__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
