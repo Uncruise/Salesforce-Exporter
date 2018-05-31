@@ -50,21 +50,20 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
 
     body = "Export Data\n\n"
 
-    status_import = ""
+    status_export = ""
     
     # Export data from Salesforce
     try:
         if not "Error" in subject:
-            status_import = export_dataloader(exporter_directory,
-                                              client_type, salesforce_type,
-                                              file_path)
+            status_export = export_dataloader(exporter_directory,
+                                              client_type, salesforce_type)
         else:
-            status_import = "Error detected so skipped"
+            status_export = "Error detected so skipped"
     except Exception as ex:
         subject += " Error Export"
         body += "\n\nUnexpected export error:" + str(ex)
     else:
-        body += "\n\nExport\n" + status_import
+        body += "\n\nExport\n" + status_export
 
     if not "Error" in subject:
         subject += " Successful"
@@ -72,7 +71,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     # Send email results
     send_email(user, sendto, subject, body, file_path, smtpsrv)
 
-    return status_import
+    return status_export
 
 def contains_data(file_name):
     """Check if file contains data after header"""
@@ -92,7 +91,7 @@ def contains_data(file_name):
 
     return False
 
-def export_dataloader(exporter_directory, client_type, salesforce_type, file_path):
+def export_dataloader(exporter_directory, client_type, salesforce_type):
     """Export out of Salesforce using DataLoader"""
 
     import os
