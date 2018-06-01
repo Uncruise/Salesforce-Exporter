@@ -2,3 +2,5 @@
 #Mon Jan 23 17:07:24 PST 2006
 Id=Id
 C501_Service_Id__c=C501_Service_Id__c
+C501_Program__c=C501_Program__c
+C501_End_Date__c=C501_End_Date__c
