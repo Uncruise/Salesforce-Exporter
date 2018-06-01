@@ -1,0 +1,8 @@
+#Mapping values
+#Mon Jan 23 17:07:24 PST 2006
+Id=Id
+Type=Type
+C501_End_Date__c=C501_End_Date__c
+C501_Start_Date__c=C501_Start_Date__c
+C501_IsPreferred__c=C501_IsPreferred__c
+C501_Other_Name__c=C501_Other_Name__c
