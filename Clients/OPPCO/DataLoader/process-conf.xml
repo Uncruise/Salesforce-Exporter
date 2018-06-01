@@ -92,7 +92,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="C501_Service_Contact__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c, C501_Contact_Created__c, C501_Nickname__c, C501_Last_Name_Other__c FROM C501_Service_Contact__c"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c, C501_Contact_Created__c, C501_Nickname__c, C501_Last_Name_Other__c, C501_First_Name__c, C501_Last_Name__c FROM C501_Service_Contact__c"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>

@@ -6,3 +6,5 @@ C501_Contact_Id__c=C501_Contact_Id__c
 C501_Contact_Created__c=C501_Contact_Created__c
 C501_Nickname__c=C501_Nickname__c
 C501_Last_Name_Other__c=C501_Last_Name_Other__c
+C501_First_Name__c=C501_First_Name__c
+C501_Last_Name__c=C501_Last_Name__c
