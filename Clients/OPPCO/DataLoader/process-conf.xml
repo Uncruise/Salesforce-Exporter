@@ -21,7 +21,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\AccountExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -46,7 +46,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -71,7 +71,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Household__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -96,7 +96,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -121,7 +121,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Other_Name__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -146,7 +146,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\AccountExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -171,7 +171,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -196,7 +196,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Household__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -221,7 +221,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -246,7 +246,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Other_Name__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
