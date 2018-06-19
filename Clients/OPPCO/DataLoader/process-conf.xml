@@ -300,6 +300,9 @@
             </map>
         </property>
     </bean>
+    <bean id="C501_Account_Merge__cExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
       <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_AccountMerge__cExtract_Sandbox"/>
         <property name="configOverrideMap">
