@@ -19,6 +19,10 @@ def main():
     else:
         Exporter_root = "C:\\repo\\Salesforce-Exporter-Private\\Clients\\" + sys.argv[2] + "\\Salesforce-Exporter"
 
+    emailattachments = False
+    if '-emailattachments' in sys.argv:
+        emailattachments = True
+
     sys.stdout = open(join(Exporter_root, '..\\Exporter.log'), 'w')
     print('Exporter Startup')
 
@@ -27,11 +31,11 @@ def main():
 
     # Export Data
     print "\n\nExporter - Export Data Process\n\n"
-    process_data(exporter_directory, salesforce_type, client_type, client_emaillist)
+    process_data(exporter_directory, salesforce_type, client_type, client_emaillist, emailattachments)
 
     print "Exporter process completed\n"
 
-def process_data(exporter_directory, salesforce_type, client_type, client_emaillist):
+def process_data(exporter_directory, salesforce_type, client_type, client_emaillist, emailattachments):
     """Process Data based on data_mode"""
 
     from os import makedirs
@@ -40,7 +44,8 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     sendto = client_emaillist.split(";")
     user = 'db.powerbi@501commons.org'
     smtpsrv = "smtp.office365.com"
-    subject = "Export Data Results -"
+    subject = "{} Export Salesforce Data Results -".format(client_type)
+
     file_path = exporter_directory + "\\Status"
     if not exists(file_path):
         makedirs(file_path)
@@ -69,7 +74,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
         subject += " Successful"
 
     # Send email results
-    send_email(user, sendto, subject, body, file_path, smtpsrv)
+    send_email(user, sendto, subject, body, file_path, smtpsrv, emailattachments)
 
     return status_export
 
@@ -140,7 +145,19 @@ def export_dataloader(exporter_directory, client_type, salesforce_type):
 
     return return_code + return_stdout + return_stderr
 
-def send_email(send_from, send_to, subject, text, file_path, server):
+def file_linecount(file_name):
+    """Count how many lines after the header"""
+
+    # set index to -1 so the header is not counted
+    line_index = -1
+    with open(file_name) as file_open:
+        for line in file_open:
+            if line:
+                line_index += 1
+
+    return line_index
+
+def send_email(send_from, send_to, subject, text, file_path, server, emailattachments):
     """Send email via O365"""
 
     #https://stackoverflow.com/questions/3362600/how-to-send-email-attachments
@@ -160,24 +177,37 @@ def send_email(send_from, send_to, subject, text, file_path, server):
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = subject
 
-    msg.attach(MIMEText(text))
-
-    from os import listdir, remove
+    from os import listdir
     from os.path import isfile, join
+
+    #Create log file for system results
+    with open(join(file_path, "importlog.txt"), "w") as text_file:
+        text_file.write(text)
+
+    msgbody = subject + "\n\n"
+    if not emailattachments:
+        msgbody += "Attachments disabled for import results.  Result files can be accessed on the import server.\n\n"
+
     onlyfiles = [join(file_path, f) for f in listdir(file_path)
                  if isfile(join(file_path, f))]
 
     for file_name in onlyfiles:
         if contains_data(file_name):
-            with open(file_name, "rb") as file_name_open:
-                part = MIMEApplication(
-                    file_name_open.read(),
-                    Name=basename(file_name)
-                    )
+
+            msgbody += "\t{}, with {} rows\n".format(file_name, file_linecount(file_name))
+
+            if emailattachments:
+                with open(file_name, "rb") as file_name_open:
+                    part = MIMEApplication(
+                        file_name_open.read(),
+                        Name=basename(file_name)
+                        )
 
             # After the file is closed
             part['Content-Disposition'] = 'attachment; filename="%s"' % basename(file_name)
             msg.attach(part)
+
+    msg.attach(MIMEText(msgbody))
 
     server = smtplib.SMTP(server, 587)
     server.starttls()
@@ -186,13 +216,6 @@ def send_email(send_from, send_to, subject, text, file_path, server):
     text = msg.as_string()
     server.sendmail(send_from, send_to, text)
     server.quit()
-
-    # Delete all status files
-    for file_name in onlyfiles:
-        try:
-            remove(file_name)
-        except:
-            continue
 
 def send_salesforce():
     """Send results to Salesforce to handle notifications"""
