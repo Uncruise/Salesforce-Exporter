@@ -43,7 +43,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     """Process Data based on data_mode"""
 
     from os import makedirs
-    from os.path import exists
+    from os.path import exists, join
 
     sendto = client_emaillist.split(";")
     user = 'db.powerbi@501commons.org'
@@ -57,7 +57,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     if not exists(export_path):
         makedirs(export_path)
 
-    body = "Export Data\n\n"
+    output_log = "Export Data\n\n"
 
     status_export = ""
     
@@ -70,9 +70,18 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
             status_export = "Error detected so skipped"
     except Exception as ex:
         subject += " Error Export"
-        body += "\n\nUnexpected export error:" + str(ex)
+        output_log += "\n\nUnexpected export error:" + str(ex)
     else:
-        body += "\n\nExport\n" + status_export
+        output_log += "\n\nExport\n" + status_export
+
+    with open(join(exporter_directory, "..\\..\\..\\exporter.log"), 'r') as exportlog:
+        output_log += exportlog.read()
+
+    import datetime
+    date_tag = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    with open(join(file_path, "Salesforce-Exporter-Log-{}.txt".format(date_tag)),
+              "w") as text_file:
+        text_file.write(output_log)
 
     if not "Error" in subject:
         subject += " Successful"
@@ -81,7 +90,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
             return status_export
 
     # Send email results
-    send_email(user, sendto, subject, body, file_path, smtpsrv, emailattachments)
+    send_email(user, sendto, subject, file_path, smtpsrv, emailattachments)
 
     return status_export
 
@@ -164,7 +173,7 @@ def file_linecount(file_name):
 
     return line_index
 
-def send_email(send_from, send_to, subject, text, file_path, server, emailattachments):
+def send_email(send_from, send_to, subject, file_path, server, emailattachments):
     """Send email via O365"""
 
     #https://stackoverflow.com/questions/3362600/how-to-send-email-attachments
@@ -186,10 +195,6 @@ def send_email(send_from, send_to, subject, text, file_path, server, emailattach
 
     from os import listdir
     from os.path import isfile, join
-
-    #Create log file for system results
-    with open(join(file_path, "Salesforce-Exporter-Log.txt"), "w") as text_file:
-        text_file.write(text)
 
     msgbody = subject + "\n\n"
     if not emailattachments:
