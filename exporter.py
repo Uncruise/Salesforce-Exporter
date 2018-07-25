@@ -44,6 +44,7 @@ def main():
 def process_data(exporter_directory, salesforce_type, client_type, client_emaillist, sys_stdout_previous_state, emailattachments, emailonsuccess):
     """Process Data based on data_mode"""
 
+    import sys
     from os import makedirs
     from os.path import exists, join
 
