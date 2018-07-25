@@ -27,7 +27,9 @@ def main():
     if '-emailonsuccess' in sys.argv:
         emailonsuccess = True
 
-    sys.stdout = open(join(Exporter_root, '..\\Exporter.log'), 'w')
+    # Setup Logging to File
+    sys_stdout_previous_state = sys.stdout
+    sys.stdout = open(join(Exporter_root, '..\\exporter.log'), 'w')
     print('Exporter Startup')
 
     exporter_directory = join(Exporter_root, "Clients\\" + client_type)
@@ -35,11 +37,11 @@ def main():
 
     # Export Data
     print "\n\nExporter - Export Data Process\n\n"
-    process_data(exporter_directory, salesforce_type, client_type, client_emaillist, emailattachments, emailonsuccess)
+    process_data(exporter_directory, salesforce_type, client_type, client_emaillist, sys_stdout_previous_state, emailattachments, emailonsuccess)
 
     print "Exporter process completed\n"
 
-def process_data(exporter_directory, salesforce_type, client_type, client_emaillist, emailattachments, emailonsuccess):
+def process_data(exporter_directory, salesforce_type, client_type, client_emaillist, sys_stdout_previous_state, emailattachments, emailonsuccess):
     """Process Data based on data_mode"""
 
     from os import makedirs
@@ -74,6 +76,9 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     else:
         output_log += "\n\nExport\n" + status_export
 
+    # Restore stdout
+    sys.stdout = sys_stdout_previous_state
+
     with open(join(exporter_directory, "..\\..\\..\\exporter.log"), 'r') as exportlog:
         output_log += exportlog.read()
 
@@ -82,6 +87,9 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     with open(join(file_path, "Salesforce-Exporter-Log-{}.txt".format(date_tag)),
               "w") as text_file:
         text_file.write(output_log)
+    
+    #Write log to stdout
+    print output_log
 
     if not "Error" in subject:
         subject += " Successful"
