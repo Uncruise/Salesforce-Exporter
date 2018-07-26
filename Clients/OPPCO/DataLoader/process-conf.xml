@@ -25,6 +25,31 @@
             </map>
         </property>
     </bean>
+    <bean id="AccountExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>AccountExtract job gets account info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="AccountExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Account"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c FROM Account"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\AccountExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract-Sandbox.csv"/>
+            </map>
+        </property>
+    </bean>
     <bean id="ContactExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
@@ -47,6 +72,31 @@
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
                 <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c FROM Contact"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -75,6 +125,31 @@
             </map>
         </property>
     </bean>
+    <bean id="C501_Service_Household__cExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>C501_Service_Household__cExtract job gets C501_Service_Household__c info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="C501_Service_Household__cExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="C501_Service_Household__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Household__c, C501_Service_Id__c, C501_Service__c, C501_Start_Date__c, C501_End_Date__c FROM C501_Service_Household__c"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Household__cExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract-Sandbox.csv"/>
+            </map>
+        </property>
+    </bean>
     <bean id="C501_Service_Contact__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
@@ -97,6 +172,31 @@
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
                 <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="C501_Service_Contact__cExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>C501_Service_Contact__cExtract job gets C501_Service_Contact__c info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="C501_Service_Contact__cExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="C501_Service_Contact__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Contact__c, C501_Service_Id__c, C501_Contact_Id__c, C501_Nickname__c, C501_Last_Name_Other__c, C501_First_Name__c, C501_Last_Name__c FROM C501_Service_Contact__c"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
@@ -125,11 +225,36 @@
             </map>
         </property>
     </bean>
+    <bean id="C501_Other_Name__cExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>C501_Other_Name__cExtract job gets C501_Other_Name__c info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="C501_Other_Name__cExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="C501_Other_Name__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Contact__c, C501_Type__c, C501_End_Date__c, C501_Start_Date__c, C501_IsPreferred__c, C501_Other_Name__c FROM C501_Other_Name__c"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Other_Name__cExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract-Sandbox.csv"/>
+            </map>
+        </property>
+    </bean>
     <bean id="C501_Account_Merge__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
       <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_AccountMerge__cExtract_Prod"/>
+        <property name="name" value="C501_Account_Merge__cExtract__Prod"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -150,11 +275,36 @@
             </map>
         </property>
     </bean>
+    <bean id="C501_Account_Merge__cExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="C501_Account_Merge__cExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="C501_Account_Merge__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Name FROM C501_Account_Merge__c"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Account_Merge__cExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Account_Merge__cExtract-Sandbox.csv"/>
+            </map>
+        </property>
+    </bean>
     <bean id="C501_Contact_Merge__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
       <description>C501_Contact_Merge__cExtract job gets C501_Contact_Merge__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_ContactMerge__cExtract_Prod"/>
+        <property name="name" value="C501_Contact_Merge__cExtract_Prod"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -175,168 +325,18 @@
             </map>
         </property>
     </bean>
-    <bean id="AccountExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>AccountExtract job gets account info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="AccountExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="Account"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c FROM Account"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\AccountExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\AccountExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="ContactExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="ContactExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="Contact"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c FROM Contact"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\ContactExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\ContactExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="C501_Service_Household__cExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>C501_Service_Household__cExtract job gets C501_Service_Household__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_Service_Household__cExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="C501_Service_Household__c"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Service__c, C501_Start_Date__c, C501_End_Date__c FROM C501_Service_Household__c"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Household__cExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Household__cExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="C501_Service_Contact__cExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>C501_Service_Contact__cExtract job gets C501_Service_Contact__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_Service_Contact__cExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="C501_Service_Contact__c"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c, C501_Nickname__c, C501_Last_Name_Other__c, C501_First_Name__c, C501_Last_Name__c FROM C501_Service_Contact__c"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Service_Contact__cExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Service_Contact__cExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="C501_Other_Name__cExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>C501_Other_Name__cExtract job gets C501_Other_Name__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_Other_Name__cExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="C501_Other_Name__c"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Contact__c, C501_Type__c, C501_End_Date__c, C501_Start_Date__c, C501_IsPreferred__c, C501_Other_Name__c FROM C501_Other_Name__c"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Other_Name__cExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Other_Name__cExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="C501_Account_Merge__cExtract_Sandbox"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
-      <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_AccountMerge__cExtract_Sandbox"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="C501_Account_Merge__c"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, Name FROM C501_Account_Merge__c"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\DataLoader\C501_Account_Merge__cExtract.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\Salesforce-Exporter\Clients\OPPCO\Export\C501_Account_Merge__cExtract-Sandbox.csv"/>
-            </map>
-        </property>
-    </bean>
     <bean id="C501_Contact_Merge__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
       <description>C501_Contact_Merge__cExtract job gets C501_Contact_Merge__c info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="C501_ContactMerge__cExtract_Sandbox"/>
+        <property name="name" value="C501_Contact_Merge__cExtract_Sandbox"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org.master"/>
-                <entry key="sfdc.password" value="6d8772f8aabbde340dc63c6991323bfb9fe69db16587a500798deaa9ff7202248f4b38cff5f13b3e"/>
+                <entry key="sfdc.password" value="df074007b0c74e21ac523fb37ffe1613b2c18ce559046a1a572b49cacdbd13b3c36c7e81e616f6692186b37c500a2d8a"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
