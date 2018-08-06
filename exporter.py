@@ -14,7 +14,7 @@ def main():
                "salesforce_type client_type client_emaillist\n")
         return
 
-    exporter_root = "C:\\repo\\Salesforce-Exporter-Private\\Clients\\{}}\\Salesforce-Exporter".format(client_type)
+    exporter_root = "C:\\repo\\Salesforce-Exporter-Private\\Clients\\{}\\Salesforce-Exporter".format(client_type)
     if '-rootdir' in sys.argv:
         exporter_root = sys.argv[sys.argv.index('-rootdir') + 1]
 
