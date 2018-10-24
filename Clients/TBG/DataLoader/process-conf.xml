@@ -1,0 +1,53 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="AccountExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>AccountExtract job gets account info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="AccountExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://TBG.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="501commons@techbridgegirls.org"/>
+                <entry key="sfdc.password" value="af85a9566f26307ae2abcb3be3fed3d57f567560a94ad15da2b385c52a60b63120939af0ac45b4ee"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Account"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c FROM Account"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\DataLoader\AccountExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\Export\AccountExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://TBG.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="501commons@techbridgegirls.org"/>
+                <entry key="sfdc.password" value="af85a9566f26307ae2abcb3be3fed3d57f567560a94ad15da2b385c52a60b63120939af0ac45b4ee"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, C501_Service_Id__c, C501_Contact_Id__c FROM Contact"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\Export\ContactExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+</beans>
