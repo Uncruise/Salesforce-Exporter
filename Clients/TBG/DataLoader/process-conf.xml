@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Account"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id FROM Account"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Name FROM Account"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\DataLoader\AccountExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
