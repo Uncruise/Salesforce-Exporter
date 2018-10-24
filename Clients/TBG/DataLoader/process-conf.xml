@@ -9,7 +9,7 @@
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://TBG.my.salesforce.com"/> 
+                <entry key="sfdc.endpoint" value="https://techbridgegirls.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="501commons@techbridgegirls.org"/>
                 <entry key="sfdc.password" value="af85a9566f26307ae2abcb3be3fed3d57f567560a94ad15da2b385c52a60b63120939af0ac45b4ee"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\DataLoader\key.txt"/>
@@ -34,7 +34,7 @@
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://TBG.my.salesforce.com"/> 
+                <entry key="sfdc.endpoint" value="https://techbridgegirls.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="501commons@techbridgegirls.org"/>
                 <entry key="sfdc.password" value="af85a9566f26307ae2abcb3be3fed3d57f567560a94ad15da2b385c52a60b63120939af0ac45b4ee"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\DataLoader\key.txt"/>
