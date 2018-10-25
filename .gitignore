@@ -5,7 +5,6 @@ settings.json
 Export/
 Incoming/
 status/
-*.properties
 key.txt
 Exporter.bat
 *.csv
