@@ -6,6 +6,7 @@ Export/
 Incoming/
 status/
 key.txt
+*.properties
 Exporter.bat
 *.csv
 ~*
