@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, ii_Primary_Contact__c, ii_Substitute_Pool_Status__c, C501_Cpr_Cert_Days_Remaining__c, C501_First_Aid_Cert_Days_Remaining__c, C501_Food_Handler_Cert_Remaining_Days__c, C501_Safe_Sleep_Cert_Remaining_Days__c, C501_PBC_Cert_Remaining_Days__c, PREPARE_Cohort__c, C501_Certs_Expiring_Message__c, PREPARE_Class__c, RecordTypeId, ii_AM_Campus_User_Upload__c, ii_Member_ID__c, ii_SSPS_Number__c, ii_FamLink_Id__c, ii_Stars_Id__c, Email, Phone, ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode, ii_County__c FROM Contact"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, ii_Primary_Contact__c, ii_Substitute_Pool_Status__c, C501_Cpr_Cert_Days_Remaining__c, C501_First_Aid_Cert_Days_Remaining__c, C501_Food_Handler_Cert_Remaining_Days__c, C501_Safe_Sleep_Cert_Remaining_Days__c, C501_PBC_Cert_Remaining_Days__c, PREPARE_Cohort__c, C501_Certs_Expiring_Message__c, PREPARE_Class__c, RecordTypeId, ii_AM_Campus_User_Upload__c, ii_Member_ID__c, ii_SSPS_Number__c, ii_FamLink_Id__c, ii_Stars_Id__c, Email, Phone, ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode, ii_County__c, ii_Facility_Name__c FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
