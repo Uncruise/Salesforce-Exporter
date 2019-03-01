@@ -19,3 +19,5 @@ ii_Member_ID__c=ii_Member_ID__c
 ii_SSPS_Number__c=ii_SSPS_Number__c
 ii_FamLink_Id__c=ii_FamLink_Id__c
 ii_Stars_Id__c=ii_Stars_Id__c
+Email=Email
+Phone=Phone
