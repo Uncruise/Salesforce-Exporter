@@ -28,3 +28,4 @@ MailingState=MailingState
 MailingPostalCode=MailingPostalCode
 ii_County__c=ii_County__c
 ii_Facility_Name__c=ii_Facility_Name__c
+ii_Sub_Pool_Status__c=ii_Sub_Pool_Status__c
