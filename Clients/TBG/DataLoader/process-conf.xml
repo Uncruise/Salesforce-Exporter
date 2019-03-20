@@ -42,7 +42,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName FROM Contact"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, Email, CreatedDate FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
