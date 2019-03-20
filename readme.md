@@ -1,21 +1,14 @@
 
-Data Loader Guide
-http://resources.docs.salesforce.com/210/17/en-us/sfdc/pdf/salesforce_data_loader.pdf
-
-Data Loader Quick Reference
-http://www.developerforce.com/media/Cheatsheet_Setting_Up_Automated_Data_Loader_9_0.pdf
+Data Loader
+https://help.salesforce.com/articleView?id=data_loader.htm
 
 Setup Instructions
 
-1) Install Salesforce Data Loader (Instructions -> https://help.salesforce.com/articleView?id=000239784&type=1)
+1) Install Zulu & Salesforce Data Loader (Instructions -> https://help.salesforce.com/articleView?id=loader_install_windows.htm)
 
-NOTE:
-  a) Make sure your current user has Administrator access on the machine
-  b) During Installation on the 'Install for admins only?' screen when prompted for 'Do you have administrator rights on this machine?' select Yes
+2) Install the latest Java Platform (JDK) -> https://www.oracle.com/technetwork/java/javase/downloads/index.html 
 
-2) Run Salesforce Data Loader to verify installation.  If you need Java installed then you will be prompted to install Java and follow the process to install Java. After Java installed run Data Loader to verify installation. 
-
-3) Install Git for Windows http://gitforwindows.org
+3) Install Git for Windows -> http://gitforwindows.org
     NOTE: Don't need to have an account just need the application installed
 
 4) Install Python 2.7.14 https://www.python.org/downloads/ 
@@ -38,5 +31,6 @@ Run c:\repo\Exporter-Private\Exporter.bat to start the Exporter.  You can run
 
 Troubleshooting
 
-1) Salesforce Data Loader can't install Admin version to C:\Program Files (x86)\salesforce.com
-Resolution: You can install on another machine where you are an administrator and then just copy the salesforce.com directory to C:\Program Files (x86) to your target machine.
+1) [Short summary] 
+Issue: 
+Resolution: 
