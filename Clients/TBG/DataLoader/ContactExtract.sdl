@@ -3,3 +3,5 @@
 Id=Id
 FirstName=FirstName
 LastName=LastName
+Email=Email
+CreatedDate=CreatedDate
