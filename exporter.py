@@ -40,10 +40,10 @@ def main():
     print "Setting Exporter Directory: " + exporter_directory
 
     # Export Data
-    print "\n\nExporter - Export Data Process\n\n"
+    print "\n\nExporter - Export Data Process\n\nThis process can take up to a couple of minutes depending on your Internet connection..."
     process_data(exporter_directory, salesforce_type, client_type, client_emaillist, sys_stdout_previous_state, emailattachments, emailonsuccess)
 
-    print "Exporter process completed\n"
+    print "\n\nExporter process completed\n"
 
 def process_data(exporter_directory, salesforce_type, client_type, client_emaillist, sys_stdout_previous_state, emailattachments, emailonsuccess):
     """Process Data based on data_mode"""
