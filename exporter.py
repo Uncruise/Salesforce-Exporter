@@ -28,13 +28,14 @@ def main():
 
     interactivemode = False
     if '-interactivemode' in sys.argv:
+        print "interactivemode"
         interactivemode = True
 
     # Setup Logging to File
     sys_stdout_previous_state = sys.stdout
     if not interactivemode:
         sys.stdout = open(join(exporter_root, '..\\exporter.log'), 'w')
-    print('Exporter Startup')
+    print "Exporter Startup"
 
     exporter_directory = join(exporter_root, "Clients\\" + client_type)
     print "Setting Exporter Directory: " + exporter_directory
