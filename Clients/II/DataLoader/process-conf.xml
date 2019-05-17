@@ -46,7 +46,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContactExtract-Master.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContactExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
