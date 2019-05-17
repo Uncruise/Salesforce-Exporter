@@ -25,4 +25,29 @@
             </map>
         </property>
     </bean>
+    <bean id="ContactExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.ii@501commons.org.master"/>
+                <entry key="sfdc.password" value="eaa9fe54ed35f2d1b8dc73fa709a059a130e535da80c1f1b336be540361b701ebb4c2019189eada8cd6ea20257a57e50cf4081210b4e7ff887cf0953bde42da8"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, ii_Primary_Contact__c, ii_Substitute_Pool_Status__c, C501_Cpr_Cert_Days_Remaining__c, C501_First_Aid_Cert_Days_Remaining__c, C501_Food_Handler_Cert_Remaining_Days__c, C501_Safe_Sleep_Cert_Remaining_Days__c, C501_PBC_Cert_Remaining_Days__c, PREPARE_Cohort__c, C501_Certs_Expiring_Message__c, PREPARE_Class__c, RecordTypeId, ii_AM_Campus_User_Upload__c, ii_Member_ID__c, ii_SSPS_Number__c, ii_FamLink_Id__c, ii_Stars_Id__c, Email, Phone, ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode, ii_County__c, ii_Facility_Name__c, ii_Sub_Pool_Status__c, ii_Languages__c FROM Contact"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContactExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
 </beans>
