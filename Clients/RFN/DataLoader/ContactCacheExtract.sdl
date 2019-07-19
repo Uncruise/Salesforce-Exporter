@@ -6,5 +6,6 @@ LastName__c=LastName__c
 Email__c=Email__c
 Owner__c=Owner__c
 Source__c=Source__c
+Type__c=Type__c
 CreatedDate=CreatedDate
 LastModifiedDate=LastModifiedDate
