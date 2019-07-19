@@ -3,7 +3,7 @@
     <bean id="ContactCacheExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
-      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+      <description>ContactCacheExtract job gets contact info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactCacheExtract_Prod"/>
         <property name="configOverrideMap">
             <map>
@@ -17,11 +17,36 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="C501_Contact_Cache__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName__c, LastName__c, Email__c, Owner__c, Source__c, CreatedDate FROM C501_Contact_Cache__c"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName__c, LastName__c, Email__c, Owner__c, Source__c, CreatedDate, LastModifiedDate FROM C501_Contact_Cache__c"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\ContactCacheExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
                 <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\Export\ContactCacheExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://login.salesforce.com"/> 
+                <entry key="sfdc.username" value="501c@raikesfoundation.org"/>
+                <entry key="sfdc.password" value="606694898dc0bfbfb5e9700fbd9decd8095dbf7449d6533ff6cca4a6be81072a26db657836b12e6185b90506a10ae565b83c6199aff210c6eacd4a65f7fe93db"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, Email, Alternate_Email__c, Personal_Email__c, OwnerId, Owner.Name, CreatedDate, LastModifiedDate FROM Contact"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\Export\ContactExtract-Prod.csv"/>
             </map>
         </property>
     </bean>

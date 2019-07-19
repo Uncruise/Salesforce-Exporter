@@ -1,0 +1,12 @@
+#Mapping values
+#Mon Jan 23 17:07:24 PST 2006
+Id=Id
+FirstName=FirstName
+LastName=LastName
+Email=Email
+Alternate_Email__c=Alternate_Email__c
+Personal_Email__c=Personal_Email__c
+OwnerId=OwnerId
+Owner.Name=Owner.Name
+CreatedDate=CreatedDate
+LastModifiedDate=LastModifiedDate
