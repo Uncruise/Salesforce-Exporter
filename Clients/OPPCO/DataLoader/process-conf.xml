@@ -11,7 +11,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -61,7 +61,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -111,7 +111,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -161,7 +161,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -211,7 +211,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -261,7 +261,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -311,7 +311,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://oppco.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.oppco@501commons.org"/>
-                <entry key="sfdc.password" value="35caf969e7f1058c20696891d3b37409b4de1d95589c2dab403b1fe24ff90350f43f18ad53e31b4053e0902bfa0e7610545194ceaa285ce6ab179c0b6d12859d"/>
+                <entry key="sfdc.password" value="a17488f44ef7e4e22431f2d27e778020eae067dd6a31d8ac4b53aca17e288faaf0b09f8291358fbd999a87955609f02efaa1b6949438017011b4089d57ea7cd7"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\OPPCO\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
