@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="C501_Contact_Cache__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName__c, LastName__c, Email__c, Owner__c, Source__c, Type__c, CreatedDate, LastModifiedDate, Mobile__c FROM C501_Contact_Cache__c where Email__c like '%501commons.org%'"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName__c, LastName__c, Email__c, Owner__c, Source__c, Type__c, CreatedDate, LastModifiedDate, Mobile__c FROM C501_Contact_Cache__c"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\ContactCacheExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
@@ -42,7 +42,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, Email, Alternate_Email__c, Personal_Email__c, OwnerId, Owner.Name, CreatedDate, LastModifiedDate FROM Contact  where Email like '%501commons.org%'"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName, Email, Alternate_Email__c, Personal_Email__c, OwnerId, Owner.Name, CreatedDate, LastModifiedDate FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
