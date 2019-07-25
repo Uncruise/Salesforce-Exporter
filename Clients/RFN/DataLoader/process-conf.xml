@@ -69,9 +69,9 @@
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName FROM User"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\ContactExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\UserExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\Export\ContactExtract-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\Export\UserExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
