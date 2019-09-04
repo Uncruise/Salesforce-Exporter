@@ -67,7 +67,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="User"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName FROM User"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName FROM User Where IsActive = true"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\RFN\Salesforce-Exporter\Clients\RFN\DataLoader\UserExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
