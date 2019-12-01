@@ -1,11 +1,12 @@
 #Mapping values
-#Mon Jan 23 17:07:24 PST 2006
+#Source, Destination
 Id=Id
 FirstName__c=FirstName__c
 LastName__c=LastName__c
 MiddleName__c=MiddleName__c
 Email__c=Email__c
 OwnerId=OwnerId
+Owner.Name=OwnerName
 Source__c=Source__c
 Type__c=Type__c
 CreatedDate=CreatedDate
