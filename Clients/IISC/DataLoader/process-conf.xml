@@ -9,9 +9,9 @@
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.iisc@501commons.org"/>
-                <entry key="sfdc.password" value="e3300ac9f21596ff505adf6df59870db56ed2acc2134025e16d37e76ada1fc61cf6179742189bc79802a6b3d6d77ff18b44272489069df5ac101661713ee4c8f"/>
+                <entry key="sfdc.password" value="b6cb38e54d5ef4dbd00cb0a917c1e08dd5f336af9bfbebd3a40be3d0b8dc4373c4c2b88b6f914eacc2722233bcaf50b338851bd1173a90a6d2cc2b7a8c150c3a"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
