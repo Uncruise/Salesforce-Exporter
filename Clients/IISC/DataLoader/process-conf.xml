@@ -10,9 +10,9 @@
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.ii@501commons.org"/>
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
                 <entry key="sfdc.password" value="382a138c5b1150a828bbafcb47abd9186f39fd076180bccc2f215c5c958de18cc04ae3e5d60d0ca9478cdac788cdc3867ad13acb96129deab21faced91d02ecb"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
@@ -21,7 +21,7 @@
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContactExtract-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\Export\ContactExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -35,7 +35,7 @@
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
-                <entry key="sfdc.username" value="db.ii@501commons.org.master"/>
+                <entry key="sfdc.username" value="db.iisc@501commons.org.master"/>
                 <entry key="sfdc.password" value="c347e0598ea8455126755d47471397f251536bee9164f04783fea47428559fbabb71d46e60e6a078f86fa2d30ac340ff8e64c0ca66648917a8a949e7533de9ab"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
@@ -44,9 +44,9 @@
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT Id, FirstName, LastName, c501_cm__ii_Primary_Contact__c, c501_cm__ii_Substitute_Pool_Status__c, c501_cm__C501_Cpr_Cert_Days_Remaining__c, c501_cm__C501_First_Aid_Cert_Days_Remaining__c, c501_cm__C501_Food_Handler_Cert_Remaining_Days__c, c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c, c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c, c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId, c501_cm__ii_Member_ID__c, c501_cm__ii_SSPS_Number__c, c501_cm__ii_FamLink_Id__c, c501_cm__ii_Stars_Id__c, Email, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode, c501_cm__ii_County__c, c501_cm__ii_Facility_Name__c, c501_cm__ii_Sub_Pool_Status__c, Languages_Spoken__c, c501_cm__ii_Employer_Name__c, c501_cm__ii_Licensed__c, c501_cm__ii_Unit_Status__c, c501_cm__Imagine_Mobile_Phone__c FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContactExtract-Sandbox.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\Export\ContactExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
