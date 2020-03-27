@@ -11,7 +11,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.iisc@501commons.org"/>
-                <entry key="sfdc.password" value="10ad4c3b6eaa8299b731053417e570fce6de6f36790caa278328ca2bdd71c1d7a521f65ce457a65a91b8cfa0b7b209dd5b3a81bb9c101ddd29ef54832f780c55"/>
+                <entry key="sfdc.password" value="e3300ac9f21596ff505adf6df59870db56ed2acc2134025e16d37e76ada1fc61cf6179742189bc79802a6b3d6d77ff18b44272489069df5ac101661713ee4c8f"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -19,9 +19,9 @@
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT Id, FirstName, LastName, c501_cm__ii_Primary_Contact__c, c501_cm__ii_Substitute_Pool_Status__c, c501_cm__C501_Cpr_Cert_Days_Remaining__c, c501_cm__C501_First_Aid_Cert_Days_Remaining__c, c501_cm__C501_Food_Handler_Cert_Remaining_Days__c, c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c, c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c, c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId, c501_cm__ii_Member_ID__c, c501_cm__ii_SSPS_Number__c, c501_cm__ii_FamLink_Id__c, c501_cm__ii_Stars_Id__c, Email, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode, c501_cm__ii_County__c, c501_cm__ii_Facility_Name__c, c501_cm__ii_Sub_Pool_Status__c, Languages_Spoken__c, c501_cm__ii_Employer_Name__c, c501_cm__ii_Licensed__c, c501_cm__ii_Unit_Status__c, c501_cm__Imagine_Mobile_Phone__c FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\Export\ContactExtract-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\Export\ContactExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
@@ -44,9 +44,9 @@
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT Id, FirstName, LastName, c501_cm__ii_Primary_Contact__c, c501_cm__ii_Substitute_Pool_Status__c, c501_cm__C501_Cpr_Cert_Days_Remaining__c, c501_cm__C501_First_Aid_Cert_Days_Remaining__c, c501_cm__C501_Food_Handler_Cert_Remaining_Days__c, c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c, c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c, c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId, c501_cm__ii_Member_ID__c, c501_cm__ii_SSPS_Number__c, c501_cm__ii_FamLink_Id__c, c501_cm__ii_Stars_Id__c, Email, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode, c501_cm__ii_County__c, c501_cm__ii_Facility_Name__c, c501_cm__ii_Sub_Pool_Status__c, Languages_Spoken__c, c501_cm__ii_Employer_Name__c, c501_cm__ii_Licensed__c, c501_cm__ii_Unit_Status__c, c501_cm__Imagine_Mobile_Phone__c FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\DataLoader\ContactExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\II\Export\ContactExtract-Sandbox.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\Export\ContactExtract-Sandbox.csv"/>
             </map>
         </property>
     </bean>
