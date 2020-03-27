@@ -11,7 +11,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="db.iisc@501commons.org"/>
-                <entry key="sfdc.password" value="382a138c5b1150a828bbafcb47abd9186f39fd076180bccc2f215c5c958de18cc04ae3e5d60d0ca9478cdac788cdc3867ad13acb96129deab21faced91d02ecb"/>
+                <entry key="sfdc.password" value="10ad4c3b6eaa8299b731053417e570fce6de6f36790caa278328ca2bdd71c1d7a521f65ce457a65a91b8cfa0b7b209dd5b3a81bb9c101ddd29ef54832f780c55"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
