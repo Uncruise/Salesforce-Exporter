@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, RecordTypeId, c501_cm__ii_Member_ID__c, c501_cm__ii_SSPS_Number__c, c501_cm__ii_FamLink_Id__c, c501_cm__ii_Stars_Id__c FROM Contact"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, RecordTypeId, c501_cm__ii_Member_ID__c, c501_cm__ii_SSPS_Number__c, c501_cm__ii_FamLink_Id__c, c501_cm__ii_Stars_Id__c, HasOptedOutOfEmail, c501_cm__C501_SMS_Opt_Out__c FROM Contact"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\DataLoader\ContactExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
