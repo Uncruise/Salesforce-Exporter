@@ -42,7 +42,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="npe4__Relationship__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, npe04__Contact__c, npe04__RelatedContact__c FROM npe4__Relationship__c"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id,npe4__Contact__c,npe4__RelatedContact__c FROM npe4__Relationship__c"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\DataLoader\RelationshipExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
