@@ -25,4 +25,29 @@
             </map>
         </property>
     </bean>
+    <bean id="RelationshipExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>RelationshipExtract job gets relationships info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="RelationshipExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="2a159da2322c942ee8071b69b4ded4f7c481e3ee65343e49b7f1473b2aaae374ef3780399e764b97f7124f38a32dc6c4389ede6213ac4cc9c475d186c2471591"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="npe4__Relationship__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, npe04__Contact__c, npe04__RelatedContact__c FROM npe4__Relationship__c"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\DataLoader\RelationshipExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IISC\Salesforce-Exporter\Clients\IISC\Export\RelationshipExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
 </beans>

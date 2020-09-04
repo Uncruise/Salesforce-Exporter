@@ -1,0 +1,6 @@
+#Mapping values
+#Mon Jan 23 17:07:24 PST 2006
+#Source, Destination
+Id=Id
+npe04__Contact__c=npe04__Contact__c
+npe04__RelatedContact__c=npe04__RelatedContact__c
