@@ -11,7 +11,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="calendar@501commons.org"/>
-                <entry key="sfdc.password" value="5d628e3d63e600725dd3febb8e7553e1a6f2a3ac6fa8e13a50dcae7875200a4a54ee9666586ba5666a38d6f78ba1bc820cf1faf84d5a0259dceadc2eb70e4258"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -36,7 +36,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="calendar@501commons.org"/>
-                <entry key="sfdc.password" value="5d628e3d63e600725dd3febb8e7553e1a6f2a3ac6fa8e13a50dcae7875200a4a54ee9666586ba5666a38d6f78ba1bc820cf1faf84d5a0259dceadc2eb70e4258"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -61,7 +61,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="calendar@501commons.org"/>
-                <entry key="sfdc.password" value="5d628e3d63e600725dd3febb8e7553e1a6f2a3ac6fa8e13a50dcae7875200a4a54ee9666586ba5666a38d6f78ba1bc820cf1faf84d5a0259dceadc2eb70e4258"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
@@ -86,7 +86,7 @@
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
                 <entry key="sfdc.username" value="calendar@501commons.org"/>
-                <entry key="sfdc.password" value="5d628e3d63e600725dd3febb8e7553e1a6f2a3ac6fa8e13a50dcae7875200a4a54ee9666586ba5666a38d6f78ba1bc820cf1faf84d5a0259dceadc2eb70e4258"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
