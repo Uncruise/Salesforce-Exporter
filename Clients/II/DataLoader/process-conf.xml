@@ -1,5 +1,55 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
+    <bean id="ContentVersionExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ImportInstanceExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContentVersionExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="calendar@501commons.org"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Import_Instance__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, Title, VersionData, FileExtension FROM ContentVersion WHERE IsLatest = True AND FileExtension != 'snote' AND Is_Scheduled_For_Import__c = True"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContentVersionExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ContentVersionExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ImportInstanceExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ImportInstanceExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ImportInstanceExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstitute.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="calendar@501commons.org"/>
+                <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Import_Instance__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Status__c, Type__c FROM Import_Instance__c WHERE Status__c = 'Scheduled'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ImportInstanceExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\Export\ImportInstanceExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
     <bean id="ContactExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
