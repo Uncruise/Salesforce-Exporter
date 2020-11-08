@@ -3,3 +3,5 @@
 Id=Id
 Status__c=Status__c
 Type__c=Type__c
+Frequency__c=Frequency__c
+Schedule_Time__c=Schedule_Time__c

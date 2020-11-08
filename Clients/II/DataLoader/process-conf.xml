@@ -67,7 +67,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Import_Instance__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="Select Id, Status__c, Type__c FROM Import_Instance__c WHERE Status__c = 'Scheduled'"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, Status__c, Type__c, Frequency__c, Schedule_Time__c FROM Import_Instance__c WHERE Status__c = 'Scheduled'"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ImportInstanceExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
