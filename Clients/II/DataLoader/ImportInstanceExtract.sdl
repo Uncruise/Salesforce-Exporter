@@ -5,3 +5,4 @@ Status__c=Status__c
 Type__c=Type__c
 Frequency__c=Frequency__c
 Schedule_Time__c=Schedule_Time__c
+Required_Import_Files__c=Required_Import_Files__c
