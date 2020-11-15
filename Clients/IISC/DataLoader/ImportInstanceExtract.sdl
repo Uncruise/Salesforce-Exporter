@@ -1,0 +1,9 @@
+#Mapping values
+#Mon Jan 23 17:07:24 PST 2006
+Id=Id
+c501npo__Status__c=Status__c
+c501npo__Type__c=Type__c
+c501npo__Frequency__c=Frequency__c
+c501npo__Schedule_Time__c=Schedule_Time__c
+c501npo__Required_Import_Files__c=Required_Import_Files__c
+c501npo__Email_Attach_Logs__c=Email_Attach_Logs__c
