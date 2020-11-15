@@ -39,10 +39,10 @@
                 <entry key="sfdc.password" value="41c54d6703a9a7e3ff5e10bdd8498552d9ac6476aae41e2b21c5d99229c554f33b25768df3adbdf7c6e1da27527fa4d791d6ec21f60b6bf8a0fa9c731d1c5080"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="1"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="ContentVersion"/>
-                <entry key="sfdc.extractionRequestSize" value="1"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, Title, VersionData, FileExtension FROM ContentVersion WHERE IsLatest = True AND FileExtension != 'snote' AND c501npo__Is_Scheduled_For_Import__c = True"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, Title, FileExtension FROM ContentVersion WHERE IsLatest = True AND FileExtension != 'snote' AND c501npo__Is_Scheduled_For_Import__c = True"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ContentVersionExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
