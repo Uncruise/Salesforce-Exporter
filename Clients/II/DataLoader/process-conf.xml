@@ -66,7 +66,7 @@
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="c501npo__Import_Instance__c"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionRequestSize" value="5000"/>
                 <entry key="sfdc.extractionSOQL" value="Select Id, c501npo__Status__c, c501npo__Type__c, c501npo__Frequency__c, c501npo__Schedule_Time__c, c501npo__Required_Import_Files__c, c501npo__Email_Attach_Logs__c FROM c501npo__Import_Instance__c WHERE c501npo__Status__c = 'Scheduled'"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\II\Salesforce-Exporter\Clients\II\DataLoader\ImportInstanceExtract.sdl"/>
