@@ -202,7 +202,18 @@ def send_email(send_from, send_to, subject, file_path, server, emailattachments)
     msg = MIMEMultipart()
 
     msg['From'] = send_from
-    msg['To'] = COMMASPACE.join(send_to)
+
+    # Errors go to AdminOnly otherwise full email list
+    if not "Error" in subject:
+        msg['To'] = COMMASPACE.join(send_to)
+
+    else:
+        import re
+        for sendToEmail in send_to:
+            if re.search("501commons", sendToEmail, re.IGNORECASE):
+                msg['To'] = sendToEmail
+                break
+
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = subject
 
