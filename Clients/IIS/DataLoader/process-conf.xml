@@ -1,0 +1,205 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="ContentDocumentLinkExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContentDocumentLinkExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContentDocumentLinkExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="ContentDocumentLink"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, LinkedEntityId  FROM ContentDocumentLink where LinkedEntityId in ( SELECT Id FROM c501npo__Import_Instance__c WHERE c501npo__Status__c = 'Scheduled' ) and LinkedEntity.Type='c501npo__Import_Instance__c'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ContentDocumentLinkExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ContentDocumentLinkExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContentVersionExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContentVersionExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContentVersionExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="ContentVersion"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.bulkApiSerialMode" value="false"/>
+                <entry key="sfdc.useBulkApi" value="true"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, Title, FileExtension FROM ContentVersion WHERE IsLatest = True AND FileExtension != 'snote' AND c501npo__Is_Scheduled_For_Import__c = True"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ContentVersionExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ContentVersionExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ImportInstanceExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ImportInstanceExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ImportInstanceExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="c501npo__Import_Instance__c"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, c501npo__Status__c, c501npo__Type__c, c501npo__Frequency__c, c501npo__Schedule_Time__c, c501npo__Required_Import_Files__c, c501npo__Email_Attach_Logs__c FROM c501npo__Import_Instance__c WHERE c501npo__Status__c = 'Scheduled'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ImportInstanceExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ImportInstanceExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName,c501_cm__ii_Primary_Contact__c,c501_cm__ii_Substitute_Pool_Status__c,c501_cm__C501_Cpr_Cert_Days_Remaining__c,c501_cm__C501_First_Aid_Cert_Days_Remaining__c,c501_cm__C501_Food_Handler_Cert_Remaining_Days__c,c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c,c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c,c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId, ii_AM_Campus_User_Upload__c,c501_cm__ii_Member_ID__c,c501_cm__ii_SSPS_Number__c,c501_cm__ii_FamLink_Id__c,c501_cm__ii_Stars_Id__c, Email, Phone,ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode,c501_cm__ii_County__c,c501_cm__ii_Facility_Name__c,c501_cm__ii_Sub_Pool_Status__c,Languages_Spoken__c,c501_cm__ii_Employer_Name__c,c501_cm__ii_Licensed__c,c501_cm__ii_Unit_Status__c,c501_cm__Imagine_Mobile_Phone__c,c501_cm__ii_SSPS_Number_Matching__c,c501_cm__ii_Stars_Id_Matching__c,c501_cm__ii_License_Number__c FROM Contact WHERE RecordType.Name = 'Contact'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ContactExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="FacilityExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>FacilityExtract job gets facility contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="FacilityExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName,c501_cm__ii_Primary_Contact__c,c501_cm__ii_Substitute_Pool_Status__c,c501_cm__C501_Cpr_Cert_Days_Remaining__c,c501_cm__C501_First_Aid_Cert_Days_Remaining__c,c501_cm__C501_Food_Handler_Cert_Remaining_Days__c,c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c,c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c,c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId,ii_AM_Campus_User_Upload__c,c501_cm__ii_Member_ID__c,c501_cm__ii_SSPS_Number__c,c501_cm__ii_FamLink_Id__c,c501_cm__ii_Stars_Id__c, Email, Phone,ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode,c501_cm__ii_County__c,c501_cm__ii_Facility_Name__c,c501_cm__ii_Sub_Pool_Status__c,Languages_Spoken__c,c501_cm__ii_Employer_Name__c,c501_cm__ii_Licensed__c,c501_cm__ii_Unit_Status__c,c501_cm__Imagine_Mobile_Phone__c,c501_cm__ii_SSPS_Number_Matching__c,c501_cm__ii_Stars_Id_Matching__c,c501_cm__ii_License_Number__c FROM Contact WHERE RecordType.Name = 'Facility'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\FacilityExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\FacilityExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactSyncExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactSyncExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactSyncExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName,c501_cm__ii_Primary_Contact__c,c501_cm__ii_Substitute_Pool_Status__c, RecordTypeId,c501_cm__ii_Member_ID__c,c501_cm__ii_SSPS_Number__c,c501_cm__ii_FamLink_Id__c,c501_cm__ii_Stars_Id__c, Email, MobilePhone, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode,c501_cm__ii_County__c,c501_cm__ii_Facility_Name__c,c501_cm__ii_Sub_Pool_Status__c,Languages_Spoken__c,c501_cm__ii_Employer_Name__c,c501_cm__ii_Licensed__c,c501_cm__ii_Unit_Status__c,c501_cm__Imagine_Mobile_Phone__c, HomePhone, OtherPhone, npe01__WorkPhone__c,c501_cm__C501_SMS_Opt_Out__c, npe01__Preferred_Email__c, npe01__PreferredPhone__c,c501_cm__Imagine_Email__c, npe01__HomeEmail__c, HasOptedOutOfEmail, npe01__WorkEmail__c, npe01__AlternateEmail__c,c501_cm__ii_SSPS_Number_Matching__c,c501_cm__ii_Stars_Id_Matching__c,c501_cm__ii_License_Number__c,c501_cm__ii_Hiv_Cert_Date__c,c501_cm__ii_Tb_Cert_Status__c,c501_cm__ii_Orientation_Incomplete_Reason__c,c501_cm__ii_PBC_Expiration__c,c501_cm__ii_Cpr_Cert_Status__c,c501_cm__ii_First_Aid_Cert_Date__c,c501_cm__ii_Safe_Sleep_Cert_Status__c,c501_cm__ii_First_Aid_Cert_Status__c,c501_cm__ii_Annual_Continuing_Education_Training__c,c501_cm__ii_Initial_Training_Req_Completed_Year__c,c501_cm__ii_Child_Abuse_Cert_Status__c,c501_cm__ii_Food_Handler_Cert_Status__c,c501_cm__ii_Initial_Training_Requirement__c,c501_cm__ii_Cpr_Cert_Date__c,c501_cm__ii_Food_Handler_Cert_Date__c,c501_cm__ii_Safe_Sleep_Cert_Date__c,c501_cm__ii_Not_Approved_Reasons__c,c501_cm__ii_Orientation_Date__c,c501_cm__ii_Participation_Status__c,c501_cm__ii_Hiv_Cert_Status__c,c501_cm__ii_Orientation_Status__c,c501_cm__ii_Age__c,c501_cm__ii_Child_Abuse_Cert_Date__c,C501_Previous_Unit_Status__c,C501_Last_Unit_Status_Change_Date__c, Outreach_Area__c FROM Contact WHERE RecordType.Name = 'Contact'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ContactSyncExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ContactSyncExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="FacilitySyncExtract_Prod"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>FacilitySyncExtract job gets facility contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="FacilitySyncExtract_Prod"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://imagineinstituteservice.my.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org"/>
+                <entry key="sfdc.password" value="25fc52e0b9afe75ba4cb5793b53e0bbe8e2a211052ef4ccbde94954088677e2135d601d03506298b458326ad9977591b891f74acf9d44babf0954d31f9441493"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName,c501_cm__ii_Primary_Contact__c,c501_cm__ii_Substitute_Pool_Status__c, RecordTypeId,c501_cm__ii_Member_ID__c,c501_cm__ii_SSPS_Number__c,c501_cm__ii_FamLink_Id__c,c501_cm__ii_Stars_Id__c, Email, MobilePhone, Phone, MailingStreet, MailingCity, MailingState, MailingPostalCode,c501_cm__ii_County__c,c501_cm__ii_Facility_Name__c,c501_cm__ii_Sub_Pool_Status__c,Languages_Spoken__c,c501_cm__ii_Employer_Name__c,c501_cm__ii_Licensed__c,c501_cm__ii_Unit_Status__c,c501_cm__Imagine_Mobile_Phone__c, HomePhone, OtherPhone, npe01__WorkPhone__c,c501_cm__C501_SMS_Opt_Out__c, npe01__Preferred_Email__c, npe01__PreferredPhone__c,c501_cm__Imagine_Email__c, npe01__HomeEmail__c, HasOptedOutOfEmail, npe01__WorkEmail__c, npe01__AlternateEmail__c,c501_cm__ii_SSPS_Number_Matching__c,c501_cm__ii_Stars_Id_Matching__c,c501_cm__ii_License_Number__c,c501_cm__ii_Hiv_Cert_Date__c,c501_cm__ii_Tb_Cert_Status__c,c501_cm__ii_Orientation_Incomplete_Reason__c,c501_cm__ii_PBC_Expiration__c,c501_cm__ii_Cpr_Cert_Status__c,c501_cm__ii_First_Aid_Cert_Date__c,c501_cm__ii_Safe_Sleep_Cert_Status__c,c501_cm__ii_First_Aid_Cert_Status__c,c501_cm__ii_Annual_Continuing_Education_Training__c,c501_cm__ii_Initial_Training_Req_Completed_Year__c,c501_cm__ii_Child_Abuse_Cert_Status__c,c501_cm__ii_Food_Handler_Cert_Status__c,c501_cm__ii_Initial_Training_Requirement__c,c501_cm__ii_Cpr_Cert_Date__c,c501_cm__ii_Food_Handler_Cert_Date__c,c501_cm__ii_Safe_Sleep_Cert_Date__c,c501_cm__ii_Not_Approved_Reasons__c,c501_cm__ii_Orientation_Date__c,c501_cm__ii_Participation_Status__c,c501_cm__ii_Hiv_Cert_Status__c,c501_cm__ii_Orientation_Status__c,c501_cm__ii_Age__c,c501_cm__ii_Child_Abuse_Cert_Date__c,C501_Previous_Unit_Status__c,C501_Last_Unit_Status_Change_Date__c,c501_cm__ii_License_Status__c,c501_cm__ii_Serving_Children_On_Subsidy__c,c501_cm__ii_Early_Achievers_Participation_Status__c, Outreach_Area__c  FROM Contact WHERE RecordType.Name = 'Facility'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\FacilitySyncExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\FacilitySyncExtract-Prod.csv"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="ContactExtract_Sandbox"
+          class="com.salesforce.dataloader.process.ProcessRunner"
+          singleton="false">
+      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="ContactExtract_Sandbox"/>
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="false"/>
+                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
+                <entry key="sfdc.endpoint" value="https://test.salesforce.com"/> 
+                <entry key="sfdc.username" value="db.iisc@501commons.org.master"/>
+                <entry key="sfdc.password" value="c347e0598ea8455126755d47471397f251536bee9164f04783fea47428559fbabb71d46e60e6a078f86fa2d30ac340ff8e64c0ca66648917a8a949e7533de9ab"/>
+                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\DataLoader\key.txt"/>
+                <entry key="sfdc.timeoutSecs" value="600"/>
+                <entry key="sfdc.loadBatchSize" value="200"/>
+                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.extractionSOQL" value="Select Id, FirstName, LastName,c501_cm__ii_Primary_Contact__c,c501_cm__ii_Substitute_Pool_Status__c,c501_cm__C501_Cpr_Cert_Days_Remaining__c,c501_cm__C501_First_Aid_Cert_Days_Remaining__c,c501_cm__C501_Food_Handler_Cert_Remaining_Days__c,c501_cm__C501_Safe_Sleep_Cert_Remaining_Days__c,c501_cm__C501_PBC_Cert_Remaining_Days__c, c501_cm__PREPARE_Cohort__c,c501_cm__C501_Certs_Expiring_Message__c, c501_cm__PREPARE_Class__c, RecordTypeId,ii_AM_Campus_User_Upload__c,c501_cm__ii_Member_ID__c,c501_cm__ii_SSPS_Number__c,c501_cm__ii_FamLink_Id__c,c501_cm__ii_Stars_Id__c, Email, Phone,ii_AM_Upload__c, MailingStreet, MailingCity, MailingState, MailingPostalCode,c501_cm__ii_County__c,c501_cm__ii_Facility_Name__c,c501_cm__ii_Sub_Pool_Status__c,Languages_Spoken__c,c501_cm__ii_Employer_Name__c,c501_cm__ii_Licensed__c,c501_cm__ii_Unit_Status__c,c501_cm__Imagine_Mobile_Phone__c FROM Contact WHERE RecordType.Name = 'Contact'"/>
+                <entry key="process.operation" value="extract"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\DataLoader\ContactExtract.sdl"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\IIS\Salesforce-Exporter\Clients\IIS\Export\ContactExtract-Sandbox.csv"/>
+            </map>
+        </property>
+    </bean>
+</beans>
