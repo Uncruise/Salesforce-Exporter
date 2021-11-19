@@ -1,0 +1,8 @@
+#Mapping values
+#Mon Jan 23 17:07:24 PST 2006
+#Source, Destination
+Id=Id
+StageName=StageName
+First_Cruise__c=First_Cruise__c
+First_Payment_Date__c=First_Payment_Date__c
+BookingNo__c=BookingNo__c
