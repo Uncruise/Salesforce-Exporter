@@ -1,10 +1,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-    <bean id="OpportunityExtract_Prod"
+    <bean id="Opportunity_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
-      <description>OpportunityExtract job gets Opportunity info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="OpportunityExtract_Prod"/>
+      <description>Opportunity job gets Opportunity info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="Opportunity_Prod"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -19,9 +19,9 @@
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT Id=Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\OpportunityExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\Opportunity.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\Export\OpportunityExtract-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\Export\Opportunity-Prod.csv"/>
             </map>
         </property>
     </bean>
