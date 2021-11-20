@@ -3,8 +3,8 @@
     <bean id="OpportunityExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           singleton="false">
-      <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="ContactExtract_Prod"/>
+      <description>OpportunityExtract job gets Opportunity info from salesforce and saves info into a CSV file.</description>
+        <property name="name" value="OpportunityExtract_Prod"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -15,13 +15,13 @@
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="Contact"/>
+                <entry key="sfdc.entity" value="Opportunity"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT Id=Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\ContactExtract.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\OpportunityExtract.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\Export\ContactExtract-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\Export\OpportunityExtract-Prod.csv"/>
             </map>
         </property>
     </bean>
