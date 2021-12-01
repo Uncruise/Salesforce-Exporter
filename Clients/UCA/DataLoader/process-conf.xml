@@ -10,14 +10,14 @@
                 <entry key="sfdc.debugMessages" value="false"/>
                 <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
                 <entry key="sfdc.endpoint" value="https://un-cruise.my.salesforce.com"/> 
-                <entry key="sfdc.username" value="daveb@501commons.org"/>
+                <entry key="sfdc.username" value="daveb@uncruise.com"/>
                 <entry key="sfdc.password" value="bdba07b48a69c4a9d6234204b74cee2f8ef767bb44d18f38597040fcf4127adef9bb82ebb68de973041227e1336498d0ec2265a1baff7b12748b9d479012b76d"/>
                 <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\DataLoader\key.txt"/>
                 <entry key="sfdc.timeoutSecs" value="600"/>
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Opportunity"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id=Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\Opportunity.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
