@@ -2,7 +2,7 @@
 <beans>
     <bean id="ContentDocumentLinkExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContentDocumentLinkExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContentDocumentLinkExtract_Prod"/>
         <property name="configOverrideMap">
@@ -27,7 +27,7 @@
     </bean>
     <bean id="ContentVersionExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContentVersionExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContentVersionExtract_Prod"/>
         <property name="configOverrideMap">
@@ -52,7 +52,7 @@
     </bean>
     <bean id="ImportInstanceExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ImportInstanceExtract job gets import instance info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ImportInstanceExtract_Prod"/>
         <property name="configOverrideMap">
@@ -77,7 +77,7 @@
     </bean>
     <bean id="ContactExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactExtract_Prod"/>
         <property name="configOverrideMap">
@@ -102,7 +102,7 @@
     </bean>
     <bean id="RelationshipExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>RelationshipExtract job gets relationships info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="RelationshipExtract_Prod"/>
         <property name="configOverrideMap">

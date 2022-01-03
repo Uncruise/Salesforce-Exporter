@@ -2,7 +2,7 @@
 <beans>
     <bean id="ContactCacheExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContactCacheExtract job gets info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactCacheExtract_Prod"/>
         <property name="configOverrideMap">
@@ -27,7 +27,7 @@
     </bean>
     <bean id="ContactExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContactExtract job gets info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactExtract_Prod"/>
         <property name="configOverrideMap">
@@ -52,7 +52,7 @@
     </bean>
     <bean id="UserExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>UserExtract job gets info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="UserExtract_Prod"/>
         <property name="configOverrideMap">
@@ -77,7 +77,7 @@
     </bean>
     <bean id="AccountExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>AccountExtract job gets info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="AccountExtract_Prod"/>
         <property name="configOverrideMap">

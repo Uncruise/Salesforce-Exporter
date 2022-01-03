@@ -2,7 +2,7 @@
 <beans>
     <bean id="Opportunity_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>Opportunity job gets Opportunity info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="Opportunity_Prod"/>
         <property name="configOverrideMap">

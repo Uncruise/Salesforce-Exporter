@@ -2,7 +2,7 @@
 <beans>
     <bean id="AccountExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>AccountExtract job gets account info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="AccountExtract_Prod"/>
         <property name="configOverrideMap">
@@ -27,7 +27,7 @@
     </bean>
     <bean id="AccountExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>AccountExtract job gets account info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="AccountExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -52,7 +52,7 @@
     </bean>
     <bean id="ContactExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactExtract_Prod"/>
         <property name="configOverrideMap">
@@ -77,7 +77,7 @@
     </bean>
     <bean id="ContactExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>ContactExtract job gets contact info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="ContactExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -102,7 +102,7 @@
     </bean>
     <bean id="C501_Service_Household__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Service_Household__cExtract job gets C501_Service_Household__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Service_Household__cExtract_Prod"/>
         <property name="configOverrideMap">
@@ -127,7 +127,7 @@
     </bean>
     <bean id="C501_Service_Household__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Service_Household__cExtract job gets C501_Service_Household__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Service_Household__cExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -152,7 +152,7 @@
     </bean>
     <bean id="C501_Service_Contact__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Service_Contact__cExtract job gets C501_Service_Contact__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Service_Contact__cExtract_Prod"/>
         <property name="configOverrideMap">
@@ -177,7 +177,7 @@
     </bean>
     <bean id="C501_Service_Contact__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Service_Contact__cExtract job gets C501_Service_Contact__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Service_Contact__cExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -202,7 +202,7 @@
     </bean>
     <bean id="C501_Other_Name__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Other_Name__cExtract job gets C501_Other_Name__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Other_Name__cExtract_Prod"/>
         <property name="configOverrideMap">
@@ -227,7 +227,7 @@
     </bean>
     <bean id="C501_Other_Name__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Other_Name__cExtract job gets C501_Other_Name__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Other_Name__cExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -252,7 +252,7 @@
     </bean>
     <bean id="C501_Account_Merge__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Account_Merge__cExtract__Prod"/>
         <property name="configOverrideMap">
@@ -277,7 +277,7 @@
     </bean>
     <bean id="C501_Account_Merge__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Account_Merge__cExtract job gets C501_Account_Merge__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Account_Merge__cExtract_Sandbox"/>
         <property name="configOverrideMap">
@@ -302,7 +302,7 @@
     </bean>
     <bean id="C501_Contact_Merge__cExtract_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Contact_Merge__cExtract job gets C501_Contact_Merge__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Contact_Merge__cExtract_Prod"/>
         <property name="configOverrideMap">
@@ -327,7 +327,7 @@
     </bean>
     <bean id="C501_Contact_Merge__cExtract_Sandbox"
           class="com.salesforce.dataloader.process.ProcessRunner"
-          singleton="false">
+          scope="prototype">
       <description>C501_Contact_Merge__cExtract job gets C501_Contact_Merge__c info from salesforce and saves info into a CSV file.</description>
         <property name="name" value="C501_Contact_Merge__cExtract_Sandbox"/>
         <property name="configOverrideMap">
