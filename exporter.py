@@ -1,3 +1,5 @@
+"""Nonprofit Salesforce © 2022 by 501 Commons is licensed under CC BY 4.0"""
+
 """Export Module for Salesforce"""
 def main():
     """Main entry point"""
