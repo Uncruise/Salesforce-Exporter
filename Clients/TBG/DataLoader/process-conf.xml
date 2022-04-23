@@ -42,6 +42,8 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="ContentVersion"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
+                <entry key="sfdc.bulkApiSerialMode" value="false"/>
+                <entry key="sfdc.useBulkApi" value="true"/>
                 <entry key="sfdc.extractionSOQL" value="SELECT ContentDocumentId, Title, VersionData, FileExtension FROM ContentVersion WHERE IsLatest = True AND FileExtension != 'snote' AND c501npo__Is_Scheduled_For_Import__c = True"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\TBG\Salesforce-Exporter\Clients\TBG\DataLoader\ContentVersionExtract.sdl"/>
