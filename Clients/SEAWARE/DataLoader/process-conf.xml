@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Opportunity"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity WHERE Reservation_Sync_Request__c = true"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name FROM Opportunity WHERE Reservation_Sync_Request__c = true"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\DataLoader\Opportunity.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
