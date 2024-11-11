@@ -2,3 +2,5 @@
 #Mon Jan 23 17:07:24 PST 2006
 Id=Id
 Name=Name
+AgencyID__c=AgencyID__c
+Seaware_Id__c = Seaware_Id__c
