@@ -92,7 +92,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, CustomerID__c, Seaware_Id__c, FirstName, LastName, Email, MiddleName, Title__c FROM Contact WHERE Reservation_Sync_Request__c = true AND Contact_Type__c = 'Guest'"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, CustomerID__c, Seaware_Id__c, FirstName, LastName, Email, MiddleName, Title FROM Contact WHERE Reservation_Sync_Request__c = true AND Contact_Type__c = 'Guest'"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\DataLoader\Client.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>

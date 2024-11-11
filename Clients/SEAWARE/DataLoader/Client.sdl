@@ -3,9 +3,9 @@
 Id=Id
 Name=Name
 CustomerID__c=CustomerID__c
-Seaware_Id__c = Seaware_Id__c
+Seaware_Id__c=Seaware_Id__c
 FirstName=FirstName
 LastName=LastName
 Email=Email
 MiddleName=MiddleName
-Title__c=Title__c
+Title=Title
