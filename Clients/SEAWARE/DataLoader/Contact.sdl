@@ -1,6 +1,6 @@
 #Mapping values
 #Mon Jan 23 17:07:24 PST 2006
-Contact_Type__c
+Contact_Type__c=Contact_Type__c
 Name=Name
 FirstName=FirstName
 LastName=LastName
@@ -12,11 +12,11 @@ RepresentativeID__c=RepresentativeID__c
 CustomerID__c=CustomerID__c
 Seaware_Id__c=Seaware_Id__c
 Account.Seaware_Id__c=Account.Seaware_Id__c
-Account.Type
-Account.Name
-Account.AgencyID__c
-Account.AgencyType__c
-Account.Consortium__c
-Account.Consortium_Start_Date__c
-Account.Consortium_End_Date__c
-Account.IATA_Number__c 
+Account.Type=Account.Type
+Account.Name=Account.Name
+Account.AgencyID__c=Account.AgencyID__c
+Account.AgencyType__c=Account.AgencyType__c
+Account.Consortium__c=Account.Consortium__c
+Account.Consortium_Start_Date__c=Account.Consortium_Start_Date__c
+Account.Consortium_End_Date__c=Account.Consortium_End_Date__c
+Account.IATA_Number__c=Account.IATA_Number__c 
