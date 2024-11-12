@@ -1,10 +1,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-    <bean id="Agent_Prod"
+    <bean id="Contact_Prod"
           class="com.salesforce.dataloader.process.ProcessRunner"
           scope="prototype">
       <description>Agent job gets Agent info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="Agent_Prod"/>
+        <property name="name" value="Contact_Prod"/>
         <property name="configOverrideMap">
             <map>
                 <entry key="sfdc.debugMessages" value="false"/>
@@ -17,36 +17,11 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Contact"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, FirstName, LastName, Email, RepresentativeID__c, Account.Seaware_Id__c, Account.Name, Account.AgencyID__c, Account.Seaware_Id__c, Account.AgencyType__c, Account.Consortium__c, Account.Consortium_Start_Date__c, Account.Consortium_End_Date__c, Account.IATA_Number__c FROM Contact WHERE (Reservation_Sync_Request__c = true AND Contact_Type__c = 'Representative') OR (WHERE Account.Type = 'Agency' AND Account.Reservation_Sync_Request__c = true)"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Name, Contact_Type__c, FirstName, LastName, CustomerID__c, Birthdate, Title, Email, RepresentativeID__c, Account.Type, Account.Seaware_Id__c, Account.Name, Account.AgencyID__c, Account.Seaware_Id__c, Account.AgencyType__c, Account.Consortium__c, Account.Consortium_Start_Date__c, Account.Consortium_End_Date__c, Account.IATA_Number__c FROM Contact WHERE (Reservation_Sync_Request__c = true AND Contact_Type__c = 'Guest') OR (Reservation_Sync_Request__c = true AND Contact_Type__c = 'Representative') OR (Account.Type = 'Agency' AND Account.Reservation_Sync_Request__c = true)"/>
                 <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\DataLoader\Agent.sdl"/>
+                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\DataLoader\Contact.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\Export\Agent-Prod.csv"/>
-            </map>
-        </property>
-    </bean>
-    <bean id="Client_Prod"
-          class="com.salesforce.dataloader.process.ProcessRunner"
-          scope="prototype">
-      <description>Client job gets Client info from salesforce and saves info into a CSV file.</description>
-        <property name="name" value="Client_Prod"/>
-        <property name="configOverrideMap">
-            <map>
-                <entry key="sfdc.debugMessages" value="false"/>
-                <entry key="sfdc.debugMessagesFile" value="c:\dataloader\samples\status\sfdcSoapTrace.log"/>
-                <entry key="sfdc.endpoint" value="https://un-cruise.my.salesforce.com"/> 
-                <entry key="sfdc.username" value="daveb@uncruise.com"/>
-                <entry key="sfdc.password" value="85571243ba6dce0c8de3d43cf8f44d385fb4db900ed99dd6d54602b5f130e0689b4dc4c519e3b698ecfe48d2493f48900f3eb716aab8b5e798fb5fc54f857612"/>
-                <entry key="process.encryptionKeyFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\DataLoader\key.txt"/>
-                <entry key="sfdc.timeoutSecs" value="600"/>
-                <entry key="sfdc.loadBatchSize" value="200"/>
-                <entry key="sfdc.entity" value="Contact"/>
-                <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, CustomerID__c, Seaware_Id__c, FirstName, LastName, Email, MiddleName, Title , Birthdate FROM Contact WHERE Reservation_Sync_Request__c = true AND Contact_Type__c = 'Guest'"/>
-                <entry key="process.operation" value="extract"/>
-                <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\DataLoader\Client.sdl"/>
-                <entry key="dataAccess.type" value="csvWrite"/>
-                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\Export\Client-Prod.csv"/>
+                <entry key="dataAccess.name" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE\Salesforce-Exporter\Clients\SEAWARE\Export\Contact-Prod.csv"/>
             </map>
         </property>
     </bean>
