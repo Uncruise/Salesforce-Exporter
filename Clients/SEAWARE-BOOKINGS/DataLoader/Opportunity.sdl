@@ -2,3 +2,8 @@
 #Mon Jan 23 17:07:24 PST 2006
 Id=Id
 Name=Name
+BookingNo__c
+Booking_Number_Seaware__c
+Stage_Migrated__c
+StageName
+Migration_Stage__c
