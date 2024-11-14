@@ -8,6 +8,7 @@ MiddleName=MiddleName
 Email=Email
 Title=Title
 Birthdate=Birthdate
+Gender__c=Gender__c
 RepresentativeID__c=RepresentativeID__c 
 CustomerID__c=CustomerID__c
 Seaware_Id__c=Seaware_Id__c
