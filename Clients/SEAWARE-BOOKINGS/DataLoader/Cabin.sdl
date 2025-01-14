@@ -2,3 +2,4 @@ Id=Id
 Name=Name
 Seaware_Managed_Booking__c=Booking__r.Seaware_Managed_Booking__c
 Unique_Id__c=Unique_Id__c
+Type__c=Type__c

@@ -42,7 +42,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Cabin__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, Booking__r.Seaware_Managed_Booking__c, Unique_Id__c FROM Cabin__c WHERE Booking__r.Cruise_Date__c > today"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, Type__c, Name, Booking__r.Seaware_Managed_Booking__c, Unique_Id__c FROM Cabin__c WHERE Booking__r.Cruise_Date__c > today"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE-BOOKINGS\Salesforce-Exporter\Clients\SEAWARE-BOOKINGS\DataLoader\Cabin.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
