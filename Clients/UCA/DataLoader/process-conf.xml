@@ -17,7 +17,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Opportunity"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c FROM Opportunity"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, StageName, First_Cruise__c, First_Payment_Date__c, BookingNo__c, Reservation_Sync_Request__c FROM Opportunity WHERE Cruise_Date__c >= LAST_N_DAYS:90 OR Reservation_Sync_Request__c = TRUE"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\UCA\Salesforce-Exporter\Clients\UCA\DataLoader\Opportunity.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>

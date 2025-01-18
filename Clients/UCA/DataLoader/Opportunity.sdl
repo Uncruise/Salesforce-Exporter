@@ -5,3 +5,4 @@ StageName=StageName
 First_Cruise__c
 First_Payment_Date__c
 BookingNo__c
+Reservation_Sync_Request__c
