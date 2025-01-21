@@ -67,7 +67,7 @@
                 <entry key="sfdc.loadBatchSize" value="200"/>
                 <entry key="sfdc.entity" value="Cruise__c"/>
                 <entry key="sfdc.extractionRequestSize" value="500"/>
-                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name FROM Cruise__c WHERE Cruise_Date__c > today"/>
+                <entry key="sfdc.extractionSOQL" value="SELECT Id, Name, Ship_Code__c FROM Cruise__c WHERE Cruise_Date__c > today"/>
                 <entry key="process.operation" value="extract"/>
                 <entry key="process.mappingFile" value="C:\repo\Salesforce-Exporter-Private\Clients\SEAWARE-BOOKINGS\Salesforce-Exporter\Clients\SEAWARE-BOOKINGS\DataLoader\Cruise.sdl"/>
                 <entry key="dataAccess.type" value="csvWrite"/>
