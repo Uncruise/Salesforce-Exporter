@@ -23,3 +23,5 @@ Account.Consortium__c=Account.Consortium__c
 Account.Consortium_Start_Date__c=Account.Consortium_Start_Date__c
 Account.Consortium_End_Date__c=Account.Consortium_End_Date__c
 Account.IATA_Number__c=Account.IATA_Number__c 
+Account.Force_Gross_Pay__c=Account.Force_Gross_Pay__c 
+Account.Force_NET_Pay__c=Account.Force_NET_Pay__c 
