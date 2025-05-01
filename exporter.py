@@ -56,7 +56,7 @@ def process_data(exporter_directory, salesforce_type, client_type, client_emaill
     from os.path import exists, join
 
     sendto = client_emaillist.split(";")
-    user = 'db.powerbi@501commons.org'
+    user = 'daveb@uncruise.com'
     smtpsrv = "smtp.office365.com"
     subject = "{} Export Salesforce Data Results -".format(client_type)
 
